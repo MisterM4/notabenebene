@@ -3,4 +3,3 @@ class AddUserIdToPosts < ActiveRecord::Migration[6.1]
     add_column :posts, :User_id, :integer
   end
 end
-bite
