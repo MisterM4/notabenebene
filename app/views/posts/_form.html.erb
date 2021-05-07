@@ -3,7 +3,7 @@
 <%= form_with(model: post) do |form| %>
   <% if post.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
+      <h2><%= pluralize(post.errors.count, "error") %> interdit l'enregistrement de ce message:</h2>
 
       <ul>
         <% post.errors.each do |error| %>
@@ -14,17 +14,17 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :titre %>
+    <%= form.label :titre %> <br>
     <%= form.text_field :title %>
   </div>
 
-  <div class="field">
-    <%= form.label :note %>
+  <div class="field mt-3">
+    <%= form.label :note %> <br>
     <%= form.text_area :content %>
   </div>
 
   <div class="actions">
-    <%= form.submit "Créer une note", class:"btn btn-warning mt-3" %>
+    <%= form.submit "Créer une note", class:"btn btn-warning btn-lg mt-3 mb-3 d-flex justify-content-center button_center mx-auto" %>
   </div>
 <% end %>
 </div>

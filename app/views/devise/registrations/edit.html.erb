@@ -1,4 +1,4 @@
-<div class="d-flex justify-content-center flex-column m-auto" style="width:fit-content;">
+<div class="d-flex justify-content-center flex-column m-auto mt-5" style="width:fit-content;">
 <h2>Modifier mon compte</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
@@ -17,8 +17,7 @@
     <%= f.label :Mot_de_passe %> <i>(ne pas remplir si vous ne voulez pas le chanter)</i><br />
     <%= f.password_field :password, autocomplete: "new-password",class:"form-control" %>
     <% if @minimum_password_length %>
-      <br />
-      <em><%= @minimum_password_length %> characters minimum</em>
+      <em class="mt-2"><%= @minimum_password_length %> characters minimum</em>
     <% end %>
   </div>
 
@@ -33,13 +32,13 @@
   </div>
 
   <div class="actions">
-    <%= f.submit "Actualiser", class:"btn btn-outline-warning" %>
+    <%= f.submit "Actualiser", class:"btn btn-warning btn-lg mt-3 mb-5 d-flex justify-content-center button_center mx-auto" %>
   </div>
 <% end %>
 
 <h3 class="text-center">Supprimer mon compte</h3>
 
-<p class="text-center h5 ">Si vous souhaitez supprimez votre compte, cliquez ci-dessous:<%= button_to "Supprimer mon compte", registration_path(resource_name), data: { confirm: "Etes vous sure?" }, method: :delete, class:"btn btn-primary d-flex justify-content-center button_center mx-auto"%></p>
+<p class="text-center h5 ">Si vous souhaitez supprimez votre compte, cliquez ci-dessous:<%= button_to "Supprimer mon compte", registration_path(resource_name), data: { confirm: "Etes vous sure?" }, method: :delete, class:"btn btn-outline-warning mt-3 d-flex justify-content-center button_center mx-auto"%></p>
 
 <p class="text-center h5"><%= link_to "Retour", :back %></p>
 </div>
