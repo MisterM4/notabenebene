@@ -1,12 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Posts</h1>
+<h1>Notes</h1>
 
-<table>
-  <thead>
+<table class="table table-hover">
+  <thead class="thead-dark">
     <tr>
-      <th>Title</th>
-      <th>Content</th>
+      <th></th>
+      <th>Titre</th>
+      <th>note</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -17,9 +18,9 @@
           <td><% if post.user == current_user %></td>
           <td><%= post.title %></td>
           <td><%= post.content %></td>
-          <td><%= link_to 'Show', post %></td>
-          <td><%= link_to 'Edit', edit_post_path(post) %></td>
-          <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= link_to 'Détails', post %></td>
+          <td><%= link_to 'Modifier', edit_post_path(post) %></td>
+          <td><%= link_to 'Supprimer', post, method: :delete, data: { confirm: 'êtes-vous sûr ?' } %></td>
         <% end %>
       </tr>
     <% end %>
@@ -28,4 +29,4 @@
 
 <br>
 
-<%= link_to 'New Post', new_post_path %>
+<%= link_to 'Créer une nouvelle note', new_post_path %>
